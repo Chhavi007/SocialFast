@@ -13,11 +13,11 @@
 
         <div class="menu">
             <ul class="headers">
-              <li><a href="index">Home</a></li>
-              <li><a href="about">About</a></li>
-              <li><a href="account">Accounts</a></li>
-              <li><a href="post">Post</a></li>
-              <li><a href="logIn">Login/Signup</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="account.html">Accounts</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="logIn.html">Login/Signup</a></li>
             </ul>
         </div>
     </div> 
@@ -35,37 +35,26 @@
             <div class="column">
               <h1>Create a New Post</h>
               <div id="icons"></div>
-              <form action="/PostIn" method="post" enctype="multipart/form-data">
+              <form>
                 <label for="content" style="color: white; font-size: 18px;">Content</label>
-                <textarea id="content" name="Content" placeholder="Write something.." style="height:200px" ></textarea>
+                <textarea id="content" name="content" placeholder="Write something.." style="height:200px" ></textarea>
                 <label for="images" style="color: white; font-size: 15px;">Images</label>
                 <input type="file" id="images" name="images" multiple>
-                <button type="submit">Post </button>
+                <button type="submit">Post</button>
               </form>
             </div>
           </div>
-          <!-- <script>
+          
+          <script>
             var accounts = document.getElementById("accounts");
             var icons = document.getElementById("icons");
             var content = document.getElementById("content");
           
-            // Add a click event listener to each account
             accounts.addEventListener("click", function(e) {
-              // Get the target element that was clicked
               var target = e.target;
-          
-              // Check if the target is a list item
               if (target.tagName === "LI") {
-                // Get the icon element from the first child of the list item
                 var icon = target.firstElementChild;
-          
-                // Create an array of icons from the icons container
-                var iconsArray = Array.from(icons.children);
-          
-                // Check if an icon with the same value already exists in the array
-                var iconExists = iconsArray.includes(icon.value);
-          
-                // If not, clone the icon element and append it to the icons container
+                var iconExists = icons.contains(icon);
                 if (!iconExists) {
                   var clone = icon.cloneNode(true);
                   clone.className = "icon";
@@ -73,42 +62,8 @@
                 }
               }
             });
-          </script>     -->
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              var accounts = document.getElementById("accounts");
-              var icons = document.getElementById("icons");
-          
-              // Add a click event listener to each account
-              accounts.addEventListener("click", function (e) {
-                // Get the target element that was clicked
-                var target = e.target;
-          
-                // Check if the target is a list item
-                if (target.tagName === "LI") {
-                  // Get the icon element from the first child of the list item
-                  var icon = target.firstElementChild;
-          
-                  // Create an array of icons from the icons container
-                  var iconsArray = Array.from(icons.children);
-          
-                  // Check if an icon with the same value already exists in the array
-                  var iconExists = iconsArray.some(function (existingIcon) {
-                    return existingIcon.dataset.icon === icon.dataset.icon;
-                  });
-          
-                  // If not, clone the icon element and append it to the icons container
-                  if (!iconExists) {
-                    var clone = icon.cloneNode(true);
-                    clone.className = "icon";
-                    icons.appendChild(clone);
-                  }
-                }
-              });
-            });
-          </script>
+          </script>     
     </div>
-    <!-- <script src="index.js"></script> -->
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>   
 </body>
 </html>
