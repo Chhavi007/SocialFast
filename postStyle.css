@@ -1,0 +1,168 @@
+/* Nav Bar Styling */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  width: 100%;
+  background-image: url("bg.jpg") ;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.navbar{
+  width: 1200px;
+  height: 75px;
+  margin: auto;
+}
+
+.icon{
+  width: 200px;
+  float: left;
+  height: 70px;
+}
+
+.logo{
+  color: #D65A31;
+  font-size: 35px;
+  font-family: Arial;
+  padding-left: 20px;
+  float: left;
+  padding-top: 10px;
+  margin-top: 5px
+}
+
+.menu{
+  width: 600px;
+  float: right;
+  height: 70px;
+}
+
+.headers {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headers li {
+  list-style: none;
+  margin-left: 62px;
+  margin-top: 27px;
+  font-size: 14px;
+}
+
+.headers li a {
+  text-decoration: none;
+  color: #EEEEEE;
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+.headers li a:hover {
+  color: #D65A31;
+}
+/* Post Part Styling */
+
+
+.row {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.column {
+  padding: 40px;
+  border-radius: 30px;
+  
+}
+
+.left {
+  width: 100%;
+}
+
+.right {
+  width: 100%;
+}
+
+.column h1 {
+  text-align: left;
+  color: #EEEEEE;
+}
+.column h2 {
+  text-align: center;
+  color: #EEEEEE;
+}
+
+.accountsShow {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  transition: 0.3s; 
+  font-family: Arial, sans-serif;
+  font-weight: bold; 
+}
+
+.accountsShow li {
+  cursor: pointer;
+  margin: 10px;
+  border: 1px solid black;
+  background-color: rgba(246, 246, 247, 0.817);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /
+  
+}
+
+.accountsShow li:hover {
+  background-color: rgba(246, 246, 247, 0.558);
+  color: white;
+}
+
+#icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+
+form {
+  margin-top: 20px;
+  
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="file"] {
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  background-color: #D65A31;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #918987;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accounts Page</title>
+    <link rel="stylesheet" href="accountStyle.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="icon">
+          <h2 class="logo">SocialFast</h2>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="account.html">Accounts</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="logIn.html">Login/Signup</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column1" style="background-color: rgba(210, 205, 205, 0.8); width: 300px; margin: auto; text-align: center;">
+          <h2>Add Account</h2>
+          <button id="myBtn" style="width: 50px; height: 50px; font-size: 24px;">+</button>
+        </div>
+        <div class="column2" style="background-color: rgba(210, 205, 205, 0.8);">
+          <h2>Added Accounts</h2>
+          <h2>---------------------------</h2>
+          <p><img src="linkedin.png" alt="LinkedIn"> 
+          <img src="instagram.jpg" alt="Instagram"> 
+          <img src="twitter.jpg" alt="Twitter"> 
+          <img src="facebook.png" alt="Facebook"> 
+          <img src="youtube.jpg" alt="YouTube"></p>
+        </div>
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Select an account</h3>
+          <p><img src="linkedin.png" alt="LinkedIn"> 
+          <img src="instagram.jpg" alt="Instagram"> 
+          <img src="twitter.jpg" alt="Twitter"> 
+          <img src="facebook.png" alt="Facebook"> 
+          <img src="youtube.jpg" alt="YouTube"> <br>
+          <button onclick="window.location.href='linkdn'">LinkedIn</button>
+          <button onclick="window.location.href='insta'">Instagram</button>
+          <button onclick="window.location.href='twit'">Twitter</button>
+          <button onclick="window.location.href='infoFb'">Facebook</button>
+          <button onclick="window.location.href='youtube'">YouTube</button></p>
+        </div>
+      </div>
+      <script>
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0]; 
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+    </body>
+</html>
