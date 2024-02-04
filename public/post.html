@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Post Page</title>
+    <link rel="stylesheet" href="postStyle.css">
+</head>
+<body>
+  <div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">SocialFast</h2>
+        </div>
+
+        <div class="menu">
+            <ul class="headers">
+              <li><a href="home">Home</a></li>
+              <li><a href="about">About</a></li>
+              <li><a href="account">Accounts</a></li>
+              <li><a href="post">Post</a></li>
+              <li><a href="logIn">Login/Signup</a></li>
+            </ul>
+        </div>
+    </div> 
+    <div class="row">
+      <div class="column">
+        <h2>Your Accounts</h2>
+        <ul id="accounts" class="accountsShow">
+          <li data-icon="logo-instagram"><ion-icon name="logo-instagram" size="large"></ion-icon> Instagram </li>
+          <li data-icon="logo-facebook"><ion-icon name="logo-facebook" size="large"></ion-icon> Facebook</li>
+          <li data-icon="logo-linkedin"><ion-icon name="logo-linkedin" size="large"></ion-icon> LinkedIn</li>
+          <li data-icon="logo-twitter"><ion-icon name="logo-twitter" size="large"></ion-icon> Twitter</li>
+          <li data-icon="logo-youtube"><ion-icon name="logo-youtube" size="large"></ion-icon> YouTube</li>
+        </ul>
+      </div>
+            <div class="column">
+              <h1>Create a New Post</h>
+              <div id="icons"></div>
+              <form action="/PostIn" method="post" enctype="multipart/form-data">
+                <label for="content" style="color: white; font-size: 18px;">Content</label>
+                <textarea id="content" name="Content" placeholder="Write something.." style="height:200px" ></textarea>
+                <label for="images" style="color: white; font-size: 15px;">Images</label>
+                <input type="file" id="images" name="images" multiple>
+                <button type="submit">Post </button>
+              </form>
+            </div>
+          </div>
+          <!-- <script>
+            var accounts = document.getElementById("accounts");
+            var icons = document.getElementById("icons");
+            var content = document.getElementById("content");
+          
+            // Add a click event listener to each account
+            accounts.addEventListener("click", function(e) {
+              // Get the target element that was clicked
+              var target = e.target;
+          
+              // Check if the target is a list item
+              if (target.tagName === "LI") {
+                // Get the icon element from the first child of the list item
+                var icon = target.firstElementChild;
+          
+                // Create an array of icons from the icons container
+                var iconsArray = Array.from(icons.children);
+          
+                // Check if an icon with the same value already exists in the array
+                var iconExists = iconsArray.includes(icon.value);
+          
+                // If not, clone the icon element and append it to the icons container
+                if (!iconExists) {
+                  var clone = icon.cloneNode(true);
+                  clone.className = "icon";
+                  icons.appendChild(clone);
+                }
+              }
+            });
+          </script>     -->
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              var accounts = document.getElementById("accounts");
+              var icons = document.getElementById("icons");
+          
+              // Add a click event listener to each account
+              accounts.addEventListener("click", function (e) {
+                // Get the target element that was clicked
+                var target = e.target;
+          
+                // Check if the target is a list item
+                if (target.tagName === "LI") {
+                  // Get the icon element from the first child of the list item
+                  var icon = target.firstElementChild;
+          
+                  // Create an array of icons from the icons container
+                  var iconsArray = Array.from(icons.children);
+          
+                  // Check if an icon with the same value already exists in the array
+                  var iconExists = iconsArray.some(function (existingIcon) {
+                    return existingIcon.dataset.icon === icon.dataset.icon;
+                  });
+          
+                  // If not, clone the icon element and append it to the icons container
+                  if (!iconExists) {
+                    var clone = icon.cloneNode(true);
+                    clone.className = "icon";
+                    icons.appendChild(clone);
+                  }
+                }
+              });
+            });
+          </script>
+    </div>
+    <!-- <script src="index.js"></script> -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>   
+</body>
+</html>
