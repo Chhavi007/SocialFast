@@ -25,6 +25,6 @@
 - AI algorithms will tailor content to fit the unique characteristics of each social media platform.
   
 **Team Name:** TechSolver<br>
-**Hackathon:** [Lean In Hacks 5.0](https://leanin-hacks-5.devfolio.co/)<br>
+**Hackathon:** [Lean In Hacks 5.0](https://leanin-hacks-5.devfolio.co/)<br> 1st Runner-Up
 **Team Members:** [Sania Saini](https://github.com/sania111), [Deepika Jain](https://github.com/Deepika8383), [Anshika Goyal](https://github.com/Anshikaa10), [Chhavi](https://github.com/chhavi007)<br>
 ## **--------------------THANK YOU ☺️--------------------**
